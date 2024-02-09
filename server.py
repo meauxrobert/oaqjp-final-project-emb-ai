@@ -5,6 +5,7 @@ app = Flask("Emototion Detector")
 
 @app.route("/emotionDetector")
 def sent_detector():
+
     text_to_analyze = request.args.get('textToAnalyze')
     dominant_emotion= emotion_detector(text_to_analyze)
     if dominant_emotion is None:
